@@ -15,10 +15,10 @@ Including another URLconf
 """
 
 from django.urls import path
-from firstapp.views import index, date
+from firstapp.views import index, Employedetail
 
 urlpatterns = [
-    path('hello/', index),
-    path('date/', date),
+    path('index/', index),
+    path('empdetails/', Employedetail),
 
 ]
