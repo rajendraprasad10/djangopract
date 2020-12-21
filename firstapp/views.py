@@ -4,9 +4,15 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import datetime
 def index(request):
-    return HttpResponse("Hello Rajendra!")
+    myname = {
+        'name' : 'rajendra'
+    }
+    return render(request, 'index.html', myname)
 
-def date(request):
-    dt = datetime.datetime.now()
-    s = '<b>Current Data Time </b>'+str(dt)
-    return HttpResponse(s)
+def Employedetail(request):
+    empdetails = {
+        'id' : 123,
+        'name': 'rajendra prasad',
+        'salary': 20000
+    }
+    return render(request, 'employedetail.html', empdetails)
